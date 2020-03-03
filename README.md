@@ -1,4 +1,4 @@
-# Ways Towards a Productive Cloud-native DevEx
+# Ways Towards a  Productive Cloud-native DevEx
 
 ## Maintainer
 

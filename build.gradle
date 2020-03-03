@@ -1,0 +1,43 @@
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'war'
+    
+    id 'fish.payara.micro-gradle-plugin' version '1.0.3'
+    id 'com.google.cloud.tools.jib' version '1.8.0'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
+}
+
+payaraMicro {
+    payaraVersion = '5.201'
+    deployWar = true
+    useUberJar = false
+    daemon = false
+}
+
+jib {
+    allowInsecureRegistries = true
+
+    from {
+        image = 'qaware/zulu-centos-payara-micro:8u242-5.201'
+    }
+    container {
+        appRoot = '/opt/payara/deployments/ROOT.war'
+        entrypoint = 'INHERIT'
+        args = ['--deploy', '/opt/payara/deployments/ROOT.war']
+        user = 'payara'
+        creationTime = "${DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now())}+01:00[Europe/Berlin]"
+        filesModificationTime = "${DateTimeFormatter.ISO_DATE_TIME.format(LocalDateTime.now())}+01:00[Europe/Berlin]"
+    }
+}
