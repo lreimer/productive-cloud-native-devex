@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productive-cloud-native-devex
+spec:
+  ports:
+    - port: 8080
+      name: http
+  selector:
+    app: productive-cloud-native-devex
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productive-cloud-native-devex
+  labels:
+    app: productive-cloud-native-devex
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productive-cloud-native-devex
+  template:
+    metadata:
+      labels:
+        app: productive-cloud-native-devex
+    spec:
+      containers:
+        - name: productive-cloud-native-devex
+          image: lreimer/productive-cloud-native-devex
+          ports:
+            - containerPort: 8080

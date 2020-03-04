@@ -1,0 +1,27 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: productive-cloud-native-devex
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: lreimer/productive-cloud-native-devex
+  # jib: {}
+  local:
+    useDockerCLI: false
+    useBuildkit: true
+deploy:
+  kubectl:
+    manifests:
+      - src/main/kubernetes/microservice.yaml
+portForward:
+  - resourceType: service
+    resourceName: productive-cloud-native-devex
+    namespace: default
+    port: 8080
+    localPort: 8080
+profiles:
+  - name: development
+    activation:
+      - kubeContext: docker-desktop

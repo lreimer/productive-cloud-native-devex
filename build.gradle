@@ -1,22 +1,26 @@
 import java.time.LocalDateTime
-import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 plugins {
     id 'java'
     id 'groovy'
     id 'war'
-    
+
     id 'fish.payara.micro-gradle-plugin' version '1.0.3'
     id 'com.google.cloud.tools.jib' version '1.8.0'
 }
 
+sourceCompatibility = 1.8
+
 repositories {
     jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 dependencies {
     providedCompile 'jakarta.platform:jakarta.jakartaee-api:8.0.0'
+    providedCompile platform('org.eclipse.microprofile:microprofile:3.2')
+    providedCompile 'org.eclipse.microprofile.config:microprofile-config-api'
 }
 
 payaraMicro {
@@ -30,7 +34,7 @@ jib {
     allowInsecureRegistries = true
 
     from {
-        image = 'qaware/zulu-centos-payara-micro:8u242-5.201'
+        image = 'qaware/distroless-zulu-payara-micro:8u242-5.201'
     }
     container {
         appRoot = '/opt/payara/deployments/ROOT.war'
