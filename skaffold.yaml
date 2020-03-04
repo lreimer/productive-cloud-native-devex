@@ -15,6 +15,7 @@ deploy:
   kubectl:
     manifests:
       - src/main/kubernetes/microservice.yaml
+      - src/main/kubernetes/database.yaml
 portForward:
   - resourceType: service
     resourceName: productive-cloud-native-devex
