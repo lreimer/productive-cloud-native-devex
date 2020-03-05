@@ -11,11 +11,11 @@ build:
   local:
     useDockerCLI: false
     useBuildkit: true
-# deploy:
-#  kubectl:
-#    manifests:
-#      - src/main/kubernetes/microservice.yaml
-#      - src/main/kubernetes/database.yaml
+deploy:
+  kubectl:
+    manifests:
+      - src/main/kubernetes/microservice.yaml
+      - src/main/kubernetes/database.yaml
 portForward:
   - resourceType: service
     resourceName: productive-cloud-native-devex
@@ -26,18 +26,18 @@ profiles:
   - name: development
     activation:
       - kubeContext: docker-desktop
-    deploy:
-      kustomize:
-        path: "src/main/kubernetes/kustomize/overlays/dev"
-  - name: integration
-    activation:
-      - env: ENVIRONMENT=INT
-    deploy:
-      kustomize:
-        path: "src/main/kubernetes/kustomize/overlays/int"
-  - name: production
-    activation:
-      - env: ENVIRONMENT=PROD
-    deploy:
-      kustomize:
-        path: "src/main/kubernetes/kustomize/overlays/prod"
+#    deploy:
+#      kustomize:
+#        path: "src/main/kubernetes/kustomize/overlays/dev"
+#  - name: integration
+#    activation:
+#      - env: ENVIRONMENT=INT
+#    deploy:
+#      kustomize:
+#        path: "src/main/kubernetes/kustomize/overlays/int"
+#  - name: production
+#    activation:
+#      - env: ENVIRONMENT=PROD
+#    deploy:
+#      kustomize:
+#        path: "src/main/kubernetes/kustomize/overlays/prod"
