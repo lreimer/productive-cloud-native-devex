@@ -18,6 +18,10 @@ Detailed instructions on how to use Kustomize to reduce your YAML bloat are [her
 
 Detailed instructions on how to use Skaffold for continuous flow are [here](skaffold.md)
 
+## Using Tilt for Continuous Flow
+
+Detailed instructions on how to use Tilt for continuous flow are [here](tilt.md)
+
 ## Maintainer
 
 M.-Leander Reimer (@lreimer), <mario-leander.reimer@qaware.de>
