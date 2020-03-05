@@ -30,6 +30,9 @@ payaraMicro {
     daemon = false
 }
 
+task kick(dependsOn: clean) {}
+task wipe(dependsOn: clean) {}
+
 jib {
     allowInsecureRegistries = true
 
