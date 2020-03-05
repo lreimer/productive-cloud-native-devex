@@ -3,7 +3,7 @@ commonLabels:
 
 namePrefix: prod-
 
-resources:
+bases:
   - ../../base
 
 patchesStrategicMerge:

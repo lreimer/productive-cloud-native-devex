@@ -3,7 +3,7 @@ commonLabels:
 
 namePrefix: int-
 
-resources:
+bases:
   - ../../base
 
 configMapGenerator:
