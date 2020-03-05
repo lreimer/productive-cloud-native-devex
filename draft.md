@@ -11,7 +11,9 @@ $ go mod init github.com/lreimer/productive-cloud-native-devex/kickstart-go-serv
 
 $ draft init
 $ draft create
+
 $ draft up
+$ draft connect 
 ```
 
 ```go
@@ -47,4 +49,3 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Ways Towards a  Productive Cloud-native DevEx with Draft")
 }
 ```
-
