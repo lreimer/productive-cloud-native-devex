@@ -1,0 +1,20 @@
+commonLabels:
+  env: prod
+
+namePrefix: prod-
+
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - microservice-replicas.yaml
+  - microservice-healthcheck.yaml
+
+configMapGenerator:
+  - name: microservice-configmap
+    behavior: merge
+    files:
+      - microservice.properties
+    literals:
+      - DEFAULT_MESSAGE=Hello World DEV.
+      - PORT=8080

@@ -1,0 +1,16 @@
+commonLabels:
+  env: dev
+
+namePrefix: dev-
+
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: microservice-configmap
+    behavior: merge
+    files:
+      - microservice.properties
+    literals:
+      - DEFAULT_MESSAGE=Hello World DEV.
+      - PORT=8080

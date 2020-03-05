@@ -1,0 +1,23 @@
+commonLabels:
+  app: productive-cloud-native-devex
+
+namespace: default
+nameSuffix: -v1
+
+resources:
+  - microservice-deployment.yaml
+  - microservice-service.yaml
+  - database-deployment.yaml
+  - database-service.yaml
+
+configMapGenerator:
+  - name: microservice-configmap
+    files:
+      - common.properties
+    literals:
+      - DEFAULT_MESSAGE=Hello World.
+  - name: database-configmap
+    literals:
+      - POSTGRES_DB=example
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=user

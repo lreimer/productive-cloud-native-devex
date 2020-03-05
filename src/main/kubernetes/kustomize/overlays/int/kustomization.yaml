@@ -1,0 +1,16 @@
+commonLabels:
+  env: int
+
+namePrefix: int-
+
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: microservice-configmap
+    behavior: merge
+    files:
+      - microservice.properties
+    literals:
+      - DEFAULT_MESSAGE=Hello World INT.
+      - PORT=8080
