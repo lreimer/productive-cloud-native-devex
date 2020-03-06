@@ -46,6 +46,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Ways Towards a  Productive Cloud-native DevEx with Draft")
+	fmt.Fprintf(w, "Ways Towards a Productive Cloud-native DevEx with Draft")
 }
 ```
