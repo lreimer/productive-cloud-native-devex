@@ -1,4 +1,4 @@
-# Ways Towards a  Productive Cloud-native DevEx
+# Ways Towards a Productive Cloud-native DevEx
 
 Make sure you have compiled the sources using `./gradlew kick ass` or `./gradlew clean ass` 
 
