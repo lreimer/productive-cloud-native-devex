@@ -2,7 +2,13 @@
 .gradle
 .gradletasknamecache
 .idea
+.vscode
+
+.settings/
+.classpath
+.project
 
 # Ignore Gradle build output directory
 build
 out
+bin
