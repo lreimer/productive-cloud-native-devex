@@ -4,6 +4,7 @@ commonLabels:
 namePrefix: prod-
 
 bases:
+  # you can also specify a Git repo URL here
   - ../../base
 
 patchesStrategicMerge:
@@ -16,5 +17,5 @@ configMapGenerator:
     files:
       - microservice.properties
     literals:
-      - DEFAULT_MESSAGE=Hello World DEV.
+      - DEFAULT_MESSAGE=Hello World PROD.
       - PORT=8080

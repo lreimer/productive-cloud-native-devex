@@ -4,6 +4,7 @@ commonLabels:
 namePrefix: int-
 
 bases:
+  # you can also specify a Git repo URL here
   - ../../base
 
 configMapGenerator:
