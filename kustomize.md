@@ -6,8 +6,8 @@ Also, on Mac you can install it using Brew and other package managers for other 
 ```
 $ brew install kustomize
 
-$ kustomize build src/main/kubernetes/kustomize/dev | bat -l yaml -
-$ kubectl apply -k src/main/kubernetes/kustomize/dev
+$ kustomize build src/main/kubernetes/kustomize/overlays/prod | bat -l yaml -
+$ kubectl apply -k src/main/kubernetes/kustomize/overlays/prod
 ```
 
 The idea is to overlay different YAML snippets to produce the final K8s YAML output. 
