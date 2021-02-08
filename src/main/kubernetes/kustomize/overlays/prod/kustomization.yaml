@@ -6,8 +6,9 @@ commonLabels:
 
 namePrefix: prod-
 
-resources:
+bases:
   # you can also specify a Git repo URL here
+  # deprecated, move to resources when working with kubectl apply -k
   - ../../base
 
 patchesStrategicMerge:
