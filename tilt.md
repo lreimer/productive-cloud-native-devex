@@ -17,4 +17,4 @@ k8s_resource('productive-cloud-native-devex', port_forwards=8080)
 local_resource('Port Forward', serve_cmd='kubectl port-forward -n default svc/database 3306:3306')
 ```
 
-The run `tilt up` in the console and get into the flow.
+The run `tilt up` in the console and get into the flow. Once finished do a `tilt down`.
