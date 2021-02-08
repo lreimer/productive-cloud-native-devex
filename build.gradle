@@ -13,7 +13,7 @@ plugins {
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
+    mavenCentral()
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
@@ -37,7 +37,10 @@ jib {
     allowInsecureRegistries = true
 
     from {
-        image = 'qaware/distroless-zulu-payara-micro:8u242-5.201'
+        image = 'qaware/distroless-zulu-payara-micro:11.0.10-5.2020.7'
+    }
+    to {
+        image = 'lreimer/productive-cloud-native-devex'
     }
     container {
         appRoot = '/opt/payara/deployments/ROOT.war'
