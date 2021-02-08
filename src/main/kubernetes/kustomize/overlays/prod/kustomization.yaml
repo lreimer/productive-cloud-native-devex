@@ -6,14 +6,20 @@ commonLabels:
 
 namePrefix: prod-
 
-bases:
+resources:
   # you can also specify a Git repo URL here
   - ../../base
 
 patchesStrategicMerge:
   - 4-replicas.yaml
   - probes.yaml
-  - loadbalancer.yaml
+
+patchesJson6902:
+  - target:
+      version: v1
+      kind: Service
+      name: productive-cloud-native-devex
+    path: loadbalancer.yaml
 
 configMapGenerator:
   - name: microservice-configmap

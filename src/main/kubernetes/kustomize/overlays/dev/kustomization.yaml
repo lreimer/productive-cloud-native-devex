@@ -6,11 +6,9 @@ commonLabels:
 
 namePrefix: dev-
 
-bases:
+resources:
   # you can also specify a Git repo URL here
   - ../../base
-
-resources:
   - hoverfly-deployment.yaml
   - hoverfly-service.yaml
 
