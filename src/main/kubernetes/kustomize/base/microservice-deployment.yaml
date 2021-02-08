@@ -19,5 +19,8 @@ spec:
       containers:
         - name: productive-cloud-native-devex
           image: lreimer/productive-cloud-native-devex
+          envFrom:
+            - configMapRef:
+                name: microservice-configmap
           ports:
             - containerPort: 8080
