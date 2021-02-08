@@ -2,10 +2,6 @@
 
 Make sure you have compiled the sources using `./gradlew kick ass` or `./gradlew clean ass` 
 
-## Using Draft as Kickstart
-
-Detailed instructions on how to use Draft to kick start your project are [here](draft.md). 
-
 ## Using Buildpacks as Kickstart
 
 Detailed instructions on how to use Cloud-native Buildpacks to kick start your project are [here](buildpacks.md) 
@@ -21,6 +17,10 @@ Detailed instructions on how to use Skaffold for continuous flow are [here](skaf
 ## Using Tilt for Continuous Flow
 
 Detailed instructions on how to use Tilt for continuous flow are [here](tilt.md)
+
+## Using Draft as Kickstart
+
+Detailed instructions on how to use Draft to kick start your project are [here](draft.md). 
 
 ## Maintainer
 

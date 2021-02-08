@@ -6,9 +6,9 @@ https://buildpacks.io/docs/
 $ brew tap buildpack/tap
 $ brew install pack
 
-$ pack suggest-builders
+$ pack builder suggest
 $ pack inspect-builder cloudfoundry/cnb:tiny
-$ pack suggest-stacks
+$ pack stack suggest
 ```
 
 To get a more complete view, have a look at the CNB sample repository.
@@ -71,6 +71,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	fmt.Fprintf(w, "Ways Towards a  Productive Cloud-native DevEx with CNB")
+	fmt.Fprintf(w, "Ways Towards a Productive Cloud-native DevEx with CNB")
 }
 ```
