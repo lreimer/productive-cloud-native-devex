@@ -7,7 +7,12 @@ build:
     sha256: {}
   artifacts:
     - image: lreimer/productive-cloud-native-devex
-  #jib: {}
+      # to build image with Jib
+      #jib: {}
+
+      # to build image with Buildpacks.io
+      # buildpacks:
+      #  builder: "gcr.io/buildpacks/builder:v1"
   local:
     useDockerCLI: false
     useBuildkit: true
