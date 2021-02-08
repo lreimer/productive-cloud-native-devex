@@ -1,0 +1,6 @@
+schemaVersion: 2.0.0
+
+fileExistenceTests:
+  - name: 'no WAR file'
+    path: '/opt/payara/deployments/productive-cloud-native-devex.war'
+    shouldExist: true
