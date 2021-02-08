@@ -10,6 +10,10 @@ Detailed instructions on how to use Cloud-native Buildpacks to kick start your p
 
 Detailed instructions on how to use Kustomize to reduce your YAML bloat are [here](kustomize.md)
 
+## Using Pulumi to replace YAML Bloat
+
+Detailed instructions on how to use Pulumi to replace your YAML bloat are [here](pulumi.md).
+
 ## Using Skaffold for Continuous Flow
 
 Detailed instructions on how to use Skaffold for continuous flow are [here](skaffold.md)
