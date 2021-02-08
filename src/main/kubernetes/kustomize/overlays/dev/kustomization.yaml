@@ -10,6 +10,10 @@ bases:
   # you can also specify a Git repo URL here
   - ../../base
 
+resources:
+  - hoverfly-deployment.yaml
+  - hoverfly-service.yaml
+
 configMapGenerator:
   - name: microservice-configmap
     behavior: merge
