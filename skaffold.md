@@ -1,6 +1,7 @@
 # Using Skaffold for Continuous Flow
 
-To run the service locally, make sure to install the latest version of [Skaffold](https://skaffold.dev).
+To run the service locally, make sure to install the latest version of [Skaffold](https://skaffold.dev). Also the [Container Structure Test](https://github.com/GoogleContainerTools/container-structure-test) tool must be installed.
+
 ```bash
 $ skaffold --help
 $ skaffold init
