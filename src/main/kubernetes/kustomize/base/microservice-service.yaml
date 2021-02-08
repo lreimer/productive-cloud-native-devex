@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: productive-cloud-native-devex
   labels:
+    type: microservice
     env: local
 spec:
   ports:
     - port: 8080
       name: http
   selector:
-    app: productive-cloud-native-devex
+    type: microservice

@@ -12,7 +12,6 @@ bases:
 
 patchesStrategicMerge:
   - 2-replicas.yaml
-  - loadbalancer.yaml
 
 configMapGenerator:
   - name: microservice-configmap

@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: database
+    type: database
   name: database
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: database
+      type: database
   template:
     metadata:
       labels:
-        app: database
+        type: database
     spec:
       containers:
         - name: database

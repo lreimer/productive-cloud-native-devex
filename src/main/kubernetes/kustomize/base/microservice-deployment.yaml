@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: productive-cloud-native-devex
   labels:
-    app: productive-cloud-native-devex
+    type: microservice
     env: local
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: productive-cloud-native-devex
+      type: microservice
   template:
     metadata:
       labels:
-        app: productive-cloud-native-devex
+        type: microservice
         env: local
     spec:
       containers:
