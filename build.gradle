@@ -24,7 +24,7 @@ dependencies {
 }
 
 payaraMicro {
-    payaraVersion = '5.201'
+    payaraVersion = '5.2020.7'
     deployWar = true
     useUberJar = false
     daemon = false
